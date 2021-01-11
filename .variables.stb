@@ -1,8 +1,7 @@
 [Variables]
 filament_loaded = 'true'
-lastservicetime = 249321
-totalprintingtime = 249321
+lastservicetime = 293827
 plate_name = 'Energetics'
 plate_offset_z = -0.0
-
+totalprintingtime = 293827
 
