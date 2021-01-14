@@ -1,7 +1,6 @@
 [Variables]
 filament_loaded = 'true'
-lastservicetime = 343741
-plate_name = 'En Thick'
-plate_offset_z = 0.15
-totalprintingtime = 343741
+lastservicetime = 359245
+plate_index = 2
+totalprintingtime = 359245
 
