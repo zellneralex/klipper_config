@@ -1,6 +1,6 @@
 [Variables]
 filament_loaded = 'true'
-lastservicetime = 359245
-plate_index = 2
-totalprintingtime = 359245
+lastservicetime = 430569
+plate_index = 3
+totalprintingtime = 430569
 
