@@ -1,6 +1,9 @@
 [Variables]
 filament_loaded = 'true'
-lastservicetime = 430569
+filament_used = 28127.1937
+filterusetime = 0
+lastservicetime = 537380
+plate = [('Mueller', 0.3), ('Energetics', 0.0), ('Texture', 0.35), ('En Thick', 0.3)]
 plate_index = 3
-totalprintingtime = 430569
+totalprintingtime = 537380
 
