@@ -4,3 +4,5 @@
 .variables.stb
 printer-*.cfg
 *.png
+*.csv
+*.jpg
