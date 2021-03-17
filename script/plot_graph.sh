@@ -3,7 +3,7 @@
 #####################################################################
 ### Please set the paths accordingly.                             ###
 #####################################################################
-### Path to your config folder WHERE YOU WANT TO STORE THE INPUT SHAPER FILES
+### Path to your config folder where you want to store your input shaper files
 is_folder=~/klipper_config/input_shaper
 
 #####################################################################
