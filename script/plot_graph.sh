@@ -10,20 +10,24 @@ is_folder=~/klipper_config/input_shaper
 ################ !!! DO NOT EDIT BELOW THIS LINE !!! ################
 #####################################################################
 remove_old() {
-  cd $is_folder
-  rm -f resonances*_old.csv
-  rm -f shaper_calibrate*_old.png
-  if [ -e resonances_x.csv ]; then
-    mv resonances_x.csv resonances_x_old.csv
-  fi
-  if [ -e resonances_y.csv ]; then
+  if [ -d $is_folder ]; then
+    cd $is_folder
+    rm -f resonances*_old.csv
+    rm -f shaper_calibrate*_old.png
+    if [ -e resonances_x.csv ]; then
+      mv resonances_x.csv resonances_x_old.csv
+    fi
+    if [ -e resonances_y.csv ]; then
     mv resonances_y.csv resonances_y_old.csv
-  fi
-  if [ -e shaper_calibrate_x.png ]; then
-    mv shaper_calibrate_x.png shaper_calibrate_x_old.png
-  fi
-  if [ -e shaper_calibrate_y.png ]; then
-    mv shaper_calibrate_y.png shaper_calibrate_y_old.png
+    fi
+    if [ -e shaper_calibrate_x.png ]; then
+      mv shaper_calibrate_x.png shaper_calibrate_x_old.png
+    fi
+    if [ -e shaper_calibrate_y.png ]; then
+      mv shaper_calibrate_y.png shaper_calibrate_y_old.png
+    fi
+  else
+    mkdir $is_folder
   fi
 }
 
