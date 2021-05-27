@@ -6,3 +6,5 @@ printer-*.cfg
 *.png
 *.csv
 *.jpg
+/logs
+*.txt
