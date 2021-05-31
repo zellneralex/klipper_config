@@ -13,7 +13,7 @@
 #
 # Defaults to auto
 #
-camera="usb"
+camera="auto"
 
 ### Additional options to supply to MJPG Streamer for the USB camera
 #
@@ -21,7 +21,7 @@ camera="usb"
 #
 # Defaults to a resolution of 640x480 px and a framerate of 10 fps
 #
-camera_usb_options="-r 1280x1024 -f 15 -d /dev/v4l/by-id/usb-046d_HD_Pro_Webcam_C920_BAB4B21F-video-index0"
+camera_usb_options="-r 1920x1080 -f 15 -d /dev/v4l/by-id/usb-046d_HD_Pro_Webcam_C920_BAB4B21F-video-index0"
 
 ### Additional webcam devices known to cause problems with -f
 #
