@@ -9,7 +9,7 @@ Since commit #d8f818a user defined variables are combined in a single macro '_US
 Since it also contains calculeted values the macro needs to run at every klipper start once. That is realized by the delayed_gecode macro '_CHECK_VORON_CONFIG' that runs automatical at klipper start. It will check if '_USER_VARIABLE' is existing and run it or throw are warning in the console. You find it inside the printer.cfg L201
 
 ## Optinal Hardware detection
-since commit # some optinal hardware is detected and the corosponding macros are only executed if this hardware was found. This should help adopt several macros but it is by no mean a universal config that you can use as a drop in for your printer and it will never be.
+since commit #8b2d9f8 some optinal hardware is detected and the corosponding macros are only executed if this hardware was found. This should help adopt several macros but it is by no mean a universal config that you can use as a drop in for your printer and it will never be.
 That you do not need to comment out macros of hardware that you do not have should be only seen as help I can only ask you to make you familiar with what you copy. 
 
 ## A word of Warning
