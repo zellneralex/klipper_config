@@ -21,7 +21,7 @@ camera="auto"
 #
 # Defaults to a resolution of 640x480 px and a framerate of 10 fps
 #
-camera_usb_options="-r 1920x1080 -f 15 -d /dev/v4l/by-id/usb-046d_HD_Pro_Webcam_C920_BAB4B21F-video-index0"
+camera_usb_options="-r 1920x1080 -f 30 -d /dev/v4l/by-id/usb-046d_HD_Pro_Webcam_C920_BAB4B21F-video-index0"
 
 ### Additional webcam devices known to cause problems with -f
 #
@@ -68,8 +68,8 @@ camera_usb_options="-r 1920x1080 -f 15 -d /dev/v4l/by-id/usb-046d_HD_Pro_Webcam_
 #
 # Current working directory is the mjpg-streamer base directory.
 #
-#camera_http_webroot="./www-mainsail"
-camera_http_options="-n -p 8080"
+camera_http_webroot="./www"
+camera_http_options="-p 8080"
 
 ### EXPERIMENTAL
 # Support for different streamer types.
