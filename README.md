@@ -9,8 +9,42 @@ Since commit #d8f818a user defined variables are combined in a single macro '_US
 Since it also contains calculeted values the macro needs to run at every klipper start once. That is realized by the delayed_gecode macro '_CHECK_VORON_CONFIG' that runs automatical at klipper start. It will check if '_USER_VARIABLE' is existing and run it or throw are warning in the console. You find it inside the printer.cfg L201
 
 ## Optinal Hardware detection
-since commit #8b2d9f8 some optinal hardware is detected and the corosponding macros are only executed if this hardware was found. This should help adopt several macros but it is by no mean a universal config that you can use as a drop in for your printer and it will never be.
+Since commit #8b2d9f8 some optinal hardware is detected and the corosponding macros are only executed if this hardware was found. This should help adopt several macros but it is by no mean a universal config that you can use as a drop in for your printer and it will never be.
 That you do not need to comment out macros of hardware that you do not have should be only seen as help I can only ask you to make you familiar with what you copy. 
+
+## Improvements to QGL check
+With the latest commit I changed the way how I check for a passing QGL. Now a separate macro is used that you can run afterwards. The only drawback here is that it cannot be part of PRINT_START as this errors out in case of a QGL fail. You need to add it to your slicer start gcode.
+As an example, here is my PrusaSlicer setting:
+```
+M140 S0 ; needed so prusaslicer/superslicer doesn't add unneeded "wait for temps" by itself
+M104 S0 ; needed so prusaslicer/superslicer doesn't add unneeded "wait for temps" by itself
+PRINT_START EXTRUDER_TEMP=[first_layer_temperature] BED_TEMP=[first_layer_bed_temperature] LAYER_HEIGHT=[layer_height] SOAK=30 ; 30 min soak time
+CHECK_QGL ; will detach probe and cancel print in case of an failing QGL
+SELECT_PA NOZZLE=[nozzle_diameter] FILAMENT=[filament_settings_id]
+```
+
+## Improvements to _USER_VARIABLE
+With the latest commit I do a few improvements that hopefully make it clearer what is user defined and what values are made to be used in the macros: 
+- to reduce the number of variables coordinates are now grouped in arrays in the format `[X,Y,Z]` or `[X,Y]`
+- only values that are planned to be used in macros are defined as variables
+- there is now a user setup block marked with:
+```
+###################################################################
+##                     start of user defines                     ## 
+## this needs to be changed for your printer                     ##
+###################################################################
+...
+...
+...
+###################################################################
+##                      end of user defines                      ## 
+###################################################################
+```
+only values between these 2 marks need to be changed by the user
+- variables inside the macro are clearer marked `user_...` are user defines all others are either calculated values or array grouping
+
+The drawback is that it looks now like a massive wall of text, but I hope to get less questions about that part now.
+
 
 ## A word of Warning
 Since I have heard people tring to copy my tmc optimization.
