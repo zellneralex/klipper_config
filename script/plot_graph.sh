@@ -34,7 +34,9 @@ remove_old() {
 plot_new() {
   mv /tmp/resonances_x_*.csv $is_folder/resonances_x.csv
   mv /tmp/resonances_y_*.csv $is_folder/resonances_y.csv
+  echo "Generate picture for x axsis"
   ~/klipper/scripts/calibrate_shaper.py $is_folder/resonances_x.csv -o $is_folder/shaper_calibrate_x.png
+  echo "Generate picture for y axsis"
   ~/klipper/scripts/calibrate_shaper.py $is_folder/resonances_y.csv -o $is_folder/shaper_calibrate_y.png
 }
 
