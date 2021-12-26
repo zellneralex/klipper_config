@@ -1,7 +1,8 @@
 [Variables]
 ercf = {'version': 1.2, 'static': {'unload_modifier': 9.0, 'min_temp_extruder': 180, 'extruder_eject_temp': 240, 'timeout_pause': 72000, 'disable_heater': 600}, 'clog_detection': False, 'endless_spool_mode': False, 'min_bowden_length': 750.0, 'selector': {'pos': [2.4, 24.0, 44.8, 71.2, 92.0, 113.6, 139.2, 160.8, 181.6], 'servo_angle': {'up': 30, 'down': 140}}, 'toolhead': {'end_of_bowden_to_sensor': 27.0, 'sensor_to_nozzle': 60.5}, 'calib': {'ref': 500, 'ratio': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]}}
-filament = [{'id': 'ESUN_ABS+_Black', 'val': [{'nozzle': 0.4, 'pa': 0.05}, {'nozzle': 0.6, 'pa': 0.055}]}, {'id': 'KVP_ABS_FL_Blue', 'val': [{'nozzle': 0.4, 'pa': 0.05}]}]
 filament_loaded = 'true'
-filament_sensor = {'toolhead_runout': 0}
+filament_sensor = {'toolhead_runout': 0, 'runout': 1}
 plates = {'array': [{'name': 'Mueller', 'offset': 0.0}, {'name': 'Energetics', 'offset': 0.0}, {'name': 'Texture', 'offset': -0.1}, {'name': 'En_Thick', 'offset': 0.0}], 'index': 0}
-print_stats = {'filament': 2779399.9760404243, 'time': {'filter': 99175, 'total': 3274790, 'service': 965328}}
+pressure_advance = [{'id': 'ESUN_ABS+_Black', 'val': [{'nozzle': 0.4, 'pa': 0.05, 'st': 0.04}, {'nozzle': 0.6, 'pa': 0.055, 'st': 0.04}]}, {'id': 'KVP_ABS_FL_Blue', 'val': [{'nozzle': 0.4, 'pa': 0.05, 'st': 0.04}]}]
+print_stats = {'filament': 2779399.9760404243, 'time': {'filter': 99334, 'total': 3274949, 'service': 965487}}
+
