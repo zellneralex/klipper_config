@@ -146,7 +146,7 @@ Following describes the variable as is today, that does not mean that there migh
 **This should be the last bigger change of the variables as I am now quiet happy with the readability of it.**
 
 ## Klipper Start (_INIT)
-There is now only one delayed_gcode with initial_duration set. This should help to get the start behavior getter controllable and more visibly. Add everything you want to run once after klipper start in there.
+There is now only one delayed_gcode with initial_duration set. This should help to get the start behavior better controllable and more visibly. Add everything you want to run once after klipper start in there.
 
 
 ## A word of Warning
