@@ -101,17 +101,17 @@ Following describes the variable as is today, that does not mean that there migh
 **purge** all variables needed to for the purge bucket and brush
 - purge : [x,y,z] coordinates to do the filament purge
 - wipe  : 
--- start : [x,y,z] coordinates for the wipe start
--- end : [x,y,z] coordinates for the wipe start   : {'x':0,'y':0,'z':0},
- -- offset : offset for each wipe move in Y direction
- -- cnt : number of wipe moves
+  - start : [x,y,z] coordinates for the wipe start
+  - end : [x,y,z] coordinates for the wipe start
+  - offset : offset for each wipe move in Y direction
+  - cnt : number of wipe moves
  
  **print_start** different variables used in PRINT_START
 - bed_up : increase of bed temp for faster heat soak
 - ival : interval between the loops while doing PRINT_START
 - time : 
--- extruder : start time of heating the extruder to target (e.g 3 min before heat soak is over)
--- bed : start time of decreasing bed to target (e.g 3 min before heat soak is over)
+  - extruder : start time of heating the extruder to target (e.g 3 min before heat soak is over)
+  - bed : start time of decreasing bed to target (e.g 3 min before heat soak is over)
 - prime_mult : height multiplier for the layer hight during purge
 
 **unload_sd** : unload sd file at PRINT_END or CANCEL_PRINT. Set this to False if you often reprint the same file 
@@ -120,7 +120,7 @@ Following describes the variable as is today, that does not mean that there migh
 - pos : [x,y,z] start poaition for the prime line
 - dir : direction of the prime line valid inputs X+, X-, Y+, Y-
 - spacing : distance between the two lines
- - length_per_seg : prime line is separated in segments to make baby-stepping easier. This is the length of a single segment
+- length_per_seg : prime line is separated in segments to make baby-stepping easier. This is the length of a single segment
 - seg : number of segments per line
 - extrude_per_seg : amount of filament per segment in mm
 
@@ -132,14 +132,14 @@ Following describes the variable as is today, that does not mean that there migh
 
 **peripheral** values needed for different hardware
 - filter (Nevermore Mini)
--- on_val : target speed when turned on 
--- warning : time in hours after the filter material change warning should be displayed
--- run_after_print : time in minutes that the filter should run after the print is finished 
+  - on_val : target speed when turned on 
+  - warning : time in hours after the filter material change warning should be displayed
+  - run_after_print : time in minutes that the filter should run after the print is finished 
 - vent (Exhaust set up as temperature_fan)
--- on_val : target temperature the Exhaust should be set to suck the air out of the chamber
--- run_after_print : time in minutes that the filter should run after the print is finished
+  - on_val : target temperature the Exhaust should be set to suck the air out of the chamber
+  - run_after_print : time in minutes that the filter should run after the print is finished
 - caselight 
--- on_val : target output when led are turned on
+  - on_val : target output when led are turned on
 
 **run**: used internal to detect that the _USER_VARIABLE was executed
                           
