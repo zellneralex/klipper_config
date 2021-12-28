@@ -149,6 +149,21 @@ Following describes the variable as is today, that does not mean that there migh
 There is now only one delayed_gcode with initial_duration set. This should help to get the start behavior better controllable and more visibly. Add everything you want to run once after klipper start in there.
 To be able to use to gnerated _USER_VARIABLE that is splitted in 2 parts. Add anything you need to excute in _EXECUTE_AT_INIT
 
+## UnicodeDecodeError after update (26.12.2021)
+I use a python 3 enviroment and for me the config is working but I get feedback from at least one user that get the following error:
+```
+Error loading template 'gcode_macro PRINT_START:gcode': UnicodeDecodeError: 'ascii' codec can't decode byte 0xc2 in position 2539: ordinal not in range(128)
+Traceback (most recent call last): File "/home/pi/klipper/klippy/extras/gcode_macro.py", line 51, in __init__
+```
+We traced it down to the degree symbol (°) but I am not sure why that this seams to be a problem. So if you run in the same issue remove the degree symbol in the various output messages at the following macros
+- PRINT_START
+- PRINT_END
+- FILAMENT_LOAD
+- FILAMENT_UNLOAD
+- NOZZLECLEAN
+- CANCEL_PRINT
+- PAUSE
+
 ## A word of Warning
 Since I have heard people tring to copy my tmc optimization.
 All driver_xxx values used in tmc.cfg are optimized for the physical drivers hocked up in the different slots and the motors I use.
