@@ -91,6 +91,8 @@ Following describes the variable as is today, that does not mean that there migh
 - frontlow : [x,y,z] front middle height is user defined
 - front : [x,y,z] front middle height is user defined
 - rear : [x,y,z] rear left height is user defined
+- pause : [x,y,dz] x,y are the same position as purge, dz is the delta increase of the toolhead 
+- park_at_cancel : Enable/Disable parkimg to the PAUSE position in CANCEL_PRINT
 
 **filament** all values are in mm
 - load_distance : filament distance used in load macro to get the filament in clockworks
