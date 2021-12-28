@@ -166,6 +166,20 @@ We traced it down to the degree symbol (°) but I am not sure why that this seam
 - CANCEL_PRINT
 - PAUSE
 
+## Removal from .variables.stb from github
+I had it now several times that user by accident use my .variables.stb. This might lead to problems and I therefor removed it from github. 
+The following shows the current structure:
+```
+[Variables]
+filament_loaded = 'true'
+filament_sensor = {'toolhead_runout': 0, 'runout': 1}
+plates = {'array': [{'name': 'Mueller', 'offset': 0.0}, {'name': 'Energetics', 'offset': 0.0}, {'name': 'Texture', 'offset': -0.1}, {'name': 'En_Thick', 'offset': 0.0}], 'index': 0}
+pressure_advance = [{'id': 'ESUN_ABS+_Black', 'val': [{'nozzle': 0.4, 'pa': 0.05, 'st': 0.04}, {'nozzle': 0.6, 'pa': 0.055, 'st': 0.04}]}, {'id': 'KVP_ABS_FL_Blue', 'val': [{'nozzle': 0.4, 'pa': 0.05, 'st': 0.04}]}]
+print_stats = {'filament': 2779399.9760404243, 'time': {'filter': 99430, 'total': 3275045, 'service': 965583}}
+```
+Please use your file or start with an empty file. The macros will add the needed variables as soon you define a plate/filament or the time of an print is added
+
+
 ## A word of Warning
 Since I have heard people tring to copy my tmc optimization.
 All driver_xxx values used in tmc.cfg are optimized for the physical drivers hocked up in the different slots and the motors I use.
