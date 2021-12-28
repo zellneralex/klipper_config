@@ -147,7 +147,7 @@ Following describes the variable as is today, that does not mean that there migh
 
 ## Klipper Start (_INIT)
 There is now only one delayed_gcode with initial_duration set. This should help to get the start behavior better controllable and more visibly. Add everything you want to run once after klipper start in there.
-
+To be able to use to gnerated _USER_VARIABLE that is splitted in 2 parts. Add anything you need to excute in _EXECUTE_AT_INIT
 
 ## A word of Warning
 Since I have heard people tring to copy my tmc optimization.
