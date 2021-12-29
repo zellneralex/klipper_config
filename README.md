@@ -171,7 +171,7 @@ I had it now several times that user by accident use my .variables.stb. This mig
 The following shows the current structure:
 ```
 [Variables]
-filament_loaded = 'true'
+filament_loaded = True
 filament_sensor = {'toolhead_runout': 0, 'runout': 1}
 plates = {'array': [{'name': 'Mueller', 'offset': 0.0}, {'name': 'Energetics', 'offset': 0.0}, {'name': 'Texture', 'offset': -0.1}, {'name': 'En_Thick', 'offset': 0.0}], 'index': 0}
 pressure_advance = [{'id': 'ESUN_ABS+_Black', 'val': [{'nozzle': 0.4, 'pa': 0.05, 'st': 0.04}, {'nozzle': 0.6, 'pa': 0.055, 'st': 0.04}]}, {'id': 'KVP_ABS_FL_Blue', 'val': [{'nozzle': 0.4, 'pa': 0.05, 'st': 0.04}]}]
