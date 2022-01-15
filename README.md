@@ -55,15 +55,26 @@ this will be the x position of the z_endstop.
 
 Following describes the variable as is today, that does not mean that there might be additions in the future that are not descript here:
 
-**hw_ena** enables or disables extra hardware following are detected
-- display  : true if display with neopixel in cfg
-- chamber :  none/fan/sensor depending on cfg
-- caselight : true if caselight is found in cfg
-- filter :  true if filter is found in cfg
-- runout : none/file/motion/switch depending on cfg
-- relay : true if safety relais are found in cfg
-- auto_z_offset : none/flexplate/z_calibz_calib+flexplate depends what is found in cfg
-- mag_probe : true is a mag probe is found in cfg
+**hw** enables or disables extra hardware following are detected
+- auto_z_offset : 
+  - type : none/flexplate/z_calib/z_calib+flexplate depending what is found in cfg
+  - ena : True if type != none
+  - auto : True if type is z_calib or z_calib+flexplate
+  - manu : True if type is flexplate or z_calib+flexplate
+- caselight.ena : True if caselight is found in cfg
+- chamber :
+  - type : none/fan/sensor depending what is found in cfg
+  - ena : True if type != none
+  - fan : True if type is fan
+- display.ena : True if display with neopixel in cfg
+- endstop_temp: True is the endstop tempsensor is found in cfg
+- filter.ena :  True if filter is found in cfg
+- mag_probe.ena: True is a mag probe is found in cfg
+- relay.ena : True if safety relais are found in cfg
+- runout : 
+  - type : none/file/motion/switch depending on cfg
+  - ena : True if type != none
+  - sensor : True if type is motion or switch
 
 **homing**
 - z_endstop : [x,y,z,hop] x,y are the endstop coordinates, z is the minimum lift calculated from the endstop z_offset to do not press the pin and hop is the z hop for the G28 moves
