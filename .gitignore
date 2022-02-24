@@ -8,3 +8,4 @@ printer-*.cfg
 *.jpg
 /logs
 *.txt
+.moonraker.conf.bkp
