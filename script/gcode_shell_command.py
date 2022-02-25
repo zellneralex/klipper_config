@@ -18,7 +18,7 @@ class ShellCommand:
         self.command = shlex.split(cmd)
         self.timeout = config.getfloat('timeout', 2., above=0.)
         self.verbose = config.getboolean('verbose', True)
-        self.proc_fd = ""
+        self.proc_fd = None
         self.partial_output = ""
         self.gcode.register_mux_command(
             "RUN_SHELL_COMMAND", "CMD", self.name,
@@ -42,7 +42,7 @@ class ShellCommand:
             data = data[:split]
         else:
             self.partial_output = ""
-            self.gcode.respond_info(data)
+        self.gcode.respond_info(data)
 
     cmd_RUN_SHELL_COMMAND_help = "Run a linux shell command"
     def cmd_RUN_SHELL_COMMAND(self, params):
